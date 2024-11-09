@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Universal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+        }
+        #executor-container {
+            width: 400px;
+            height: 250px;
+            margin: 20px auto;
+            background-color: #222;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            position: relative;
+        }
+        #options-panel {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 50px;
+            width: 200px;
+            background-color: #2b2b2b;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .toggle-option {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        #script-area {
+            width: 100%;
+            height: 100px;
+            background-color: #111;
+            border: none;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            width: 80px;
+            padding: 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div id="executor-container">
+    <h3 style="text-align: center;">Roblox Universal</h3>
+    <textarea id="script-area" placeholder="Enter your script here..."></textarea>
+    <div class="button-container">
+        <button>EXECUTE</button>
+        <button>INJECT</button>
+        <button>CLEAR</button>
+        <button>INFO</button>
+        <button onclick="toggleOptions()">OPTIONS</button>
+    </div>
+
+    <div id="options-panel">
+        <div class="toggle-option">
+            <span>Kill Roblox</span>
+            <input type="checkbox">
+        </div>
+        <div class="toggle-option">
+            <span>Scripthub</span>
+            <input type="checkbox">
+        </div>
+        <div class="toggle-option">
+            <span>Normal Editor</span>
+            <input type="checkbox">
+        </div>
+        <hr>
+        <div class="toggle-option">
+            <span>save script</span>
+            <input type="checkbox">
+        </div>
+        <div class="toggle-option">
+            <span>open script</span>
+            <input type="checkbox">
+        </div>
+        <div class="toggle-option">
+            <span>Auto Inject</span>
+            <input type="checkbox">
+        </div>
+        <div class="toggle-option">
+            <span>Top Most</span>
+            <input type="checkbox">
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleOptions() {
+        const optionsPanel = document.getElementById('options-panel');
+        optionsPanel.style.display = optionsPanel.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
