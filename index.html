@@ -103,6 +103,7 @@
             background-color: #c0392b;
         }
 
+        /* Executors Slot Styling */
         .executors-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -130,6 +131,7 @@
             color: white;
         }
 
+        /* Scripts List */
         .scripts-list {
             list-style: none;
             padding: 0;
@@ -165,6 +167,22 @@
             margin-right: auto;
         }
 
+        /* New CSS Class for API Download Button */
+        .api-download-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .api-download-btn:hover {
+            background-color: #2980b9;
+        }
+
         footer {
             position: absolute;
             bottom: 0;
@@ -194,18 +212,15 @@
 
     <!-- Content -->
     <div class="content download-section active" id="download">
-      
-
-        <!-- Executor Slots -->
         <div class="executors-list">
-           <div class="executor-slot"><a href="Home">Roblox Universal</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_2.exe">Executor Slot 2</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_3.exe">Executor Slot 3</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_4.exe">Executor Slot 4</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_5.exe">Executor Slot 5</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_6.exe">Executor Slot 6</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_7.exe">Executor Slot 7</a></div>
-<div class="executor-slot"><a href="executor/roblox_executor_8.exe">Executor Slot 8</a></div>
+            <div class="executor-slot"><a href="Home">Roblox Universal</a></div>
+             <div class="executor-slot"><a href="Warp">WarpSploit</a></div>
+             <div class="executor-slot"><a href="Horizon">Horizon</a></div>
+             <div class="executor-slot"><a href="Mira">MiraXSploit</a></div>
+             <div class="executor-slot"><a href="Xeno">Xeno</a></div>
+             <div class="executor-slot"><a href="Solar">Solara</a></div>
+             <div class="executor-slot"><a href="jj">jjsploit</a></div>
+            <div class="executor-slot"><a href="executor/roblox_executor_8.exe">Executor Slot 8</a></div>
         </div>
     </div>
 
@@ -219,22 +234,26 @@
     </div>
 
     <div class="content api-section" id="api">
-        <h2>API Documentation</h2>
-        <p>Explore the APIs for integrating and using the Roblox executor.</p>
-        
+        <h2>APIs</h2>
+        <p>Code your own Executor with an API!</p>
+
         <!-- API 1 -->
         <h3>ForlornApi</h3>
-           
         <pre>
-           ForlornApi.Api.ExecuteScript(Fastcoloredtextbox1.Text); //example
+            ForlornApi.Api.ExecuteScript(Fastcoloredtextbox1.Text); // example
         </pre>
-        <a href="your-download-link" class="download-btn">Download ForlornApi</a>
+        <a href="path/to/ForlornApi.zip" class="api-download-btn" download>Download ForlornApi</a>
 
         <!-- API 2 -->
-        <h3>cxapi Based On Xeno</h3>
+        
+		
+		
+		
+		<h3>cxapi Based On Xeno</h3>
         <pre>
-            CoreFunctions.Execute(Fastcoloredtextbox1.Text); //idk if its correct i dont rember
+            CoreFunctions.Execute(Fastcoloredtextbox1.Text); // idk if its correct
         </pre>
+        <a href="path/to/cxapi.zip" class="api-download-btn" download>Download cxapi</a>
     </div>
 
     <!-- Footer -->
@@ -253,10 +272,9 @@
                 tabs.forEach(t => t.classList.remove('active'));
                 contentSections.forEach(section => section.classList.remove('active'));
 
-                // Add active class to the clicked tab and the corresponding content section
+                // Add active class to clicked tab and corresponding content
                 e.target.classList.add('active');
-                const activeTab = e.target.getAttribute('data-tab');
-                document.getElementById(activeTab).classList.add('active');
+                document.getElementById(e.target.dataset.tab).classList.add('active');
             });
         });
     </script>
