@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Hub</title>
+    <style>
+        body, html {
+            background-color: rgb(25, 25, 25);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-height: 100vh;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+        .script-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(25, 25, 25);
+            border: 2px solid #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .script-image {
+            width: 100%;
+            height: 100px;
+            background-color: #606060;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .script-info {
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            background-color: transparent;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="script-card">
+            <img class="script-image" src="https://i.ytimg.com/vi/nRkWS2wYTHM/hqdefault.jpg" alt="Infinite Yield" />
+            <p class="script-info">A powerful admin script with many useful commands for Roblox.</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\', true))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://scriptblox.com/images/script/7711635737-1730105435983.png" alt="Kanistay EMH Script" />
+            <p class="script-info">Kanistay Emergency Hamburg</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/Kanistay/EH/refs/heads/main/kansty\'))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://pantograph.io/wp-content/uploads/2021/01/DEX-Explorer-1.jpg" alt="Dex Explorer" />
+            <p class="script-info">Dex Explorer</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://cdn.wearedevs.net/scripts/Dex Explorer V2.txt\'))')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://tr.rbxcdn.com/b7a7a8388899bf818941dcef37e904c7/500/280/Image/Jpeg" alt="Bulwark Hub" />
+            <p class="script-info">Bulwark ERLC</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/forgebin/bulwark/main/erlc.lua\'))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://tr.rbxcdn.com/5087cd04a0ddd0208b4d3aabd558afa2/768/432/Image/Png" alt="BloxFruits Script" />
+            <p class="script-info">BloxFruits Script</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/ascn123/HOHO_H/main/Loading_UI\'))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://th.bing.com/th/id/OIP.kI80nfkLvR4AiKf3mA_E2QAAAA?rs=1&amp;pid=ImgDetMain" alt="ZapHub" />
+            <p class="script-info">ZapHub</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://www.zaphub.xyz/Exec\'))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://th.bing.com/th/id/OIP.P6Lkj80-sAhREcLXagbLAAAAAA?rs=1&amp;pid=ImgDetMain" alt="Adopt Me BxlixHuB" />
+            <p class="script-info">Adopt Me BxlixHuB</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/trdrock/adoptMe/main/BxlixHuB\'))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://th.bing.com/th/id/OIP.7FteCE55EgO9asDsgzZE8AHaEK?rs=1&amp;pid=ImgDetMain" alt="Universal Windows Hub" />
+            <p class="script-info">Universal Windows Hub</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/aldzscripts/windowshub/main/Tps\', true))()')">Copy</button>
+        </div>
+
+        <div class="script-card">
+            <img class="script-image" src="https://th.bing.com/th/id/OIP.yYCHVkCELuohHk_Gxq0z0QHaEK?rs=1&amp;pid=ImgDetMain" alt="MM2 Hub" />
+            <p class="script-info">MM2 Hub</p>
+            <button class="copy-btn" onclick="copyScript('loadstring(game:HttpGet(\'https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua\'))()')">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function copyScript(scriptCode) {
+            navigator.clipboard.writeText(scriptCode).then(() => {
+                alert("Script copied to clipboard!");
+            }).catch(err => {
+                alert("Failed to copy script.");
+                console.error(err);
+            });
+        }
+    </script>
+</body>
+</html>

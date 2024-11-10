@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarpSploit</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: #fff;
+            overflow: hidden;
+            flex-direction: column; /* Align content vertically */
+        }
+
+        /* Return Home Button Styling */
+        .return-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+            background: linear-gradient(135deg, #1E90FF, #4682B4); /* Blue gradient */
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 20px rgba(30, 144, 255, 0.3);
+        }
+
+        .return-home:hover {
+            background: linear-gradient(135deg, #1E90FF, #4682B4);
+            transform: translateY(-5px);
+        }
+
+        /* Card Styling */
+        .card {
+            text-align: center;
+            padding: 4rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: #1E90FF; /* Blue */
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #B0C4DE; /* Light blue */
+        }
+
+        /* Image Styling */
+        .executor-image {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Button Styling */
+        .download-button, .test-button {
+            font-size: 1.5rem;
+            padding: 1rem 2.5rem;
+            color: #fff;
+            background: linear-gradient(135deg, #1E90FF, #4682B4); /* Blue gradient */
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 20px rgba(30, 144, 255, 0.3);
+            margin: 0.5rem;
+        }
+
+        .download-button:hover, .test-button:hover {
+            background: linear-gradient(135deg, #4682B4, #1E90FF); /* Darker blue gradient on hover */
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Return Home Button -->
+    <a href="index.html" class="return-home">Return Home</a>
+
+    <!-- Card Content -->
+    <div class="card">
+        <h1>WarpSploit</h1>
+        <p>Nice Ui 82 in unc, great UI, Higly Recomended for new exploit users!</p>
+        
+        <!-- Image in the center -->
+        <img src="warp.png" alt="Universal Roblox Executor" class="executor-image">
+
+        <p>Click the button below to start your download.</p>
+        <a href="https://objects.githubusercontent.com/github-production-release-asset-2e65be/875290212/d8ae8a60-f37a-46cc-96cd-d054a8eed5c0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241110T095859Z&X-Amz-Expires=300&X-Amz-Signature=7c93bc4eea5c363264131c8102207c3048c9787eb02331f6b119f6b5c81d67e8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DWarpSploit.zip&response-content-type=application%2Foctet-stream" class="download-button">Download Now</a>
+
+    </div>
+
+    <!-- JavaScript for Mouse Movement Effect on Image -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const image = document.querySelector('.executor-image');
+            
+            const { clientX: mouseX, clientY: mouseY } = e;
+            const imageRect = image.getBoundingClientRect();
+            
+            // Calculate the movement of the image based on cursor position
+            const offsetX = (mouseX - (imageRect.left + imageRect.width / 2)) / 15;
+            const offsetY = (mouseY - (imageRect.top + imageRect.height / 2)) / 15;
+
+            // Apply slight movement effect on the image
+            image.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        });
+    </script>
+
+</body>
+</html>
